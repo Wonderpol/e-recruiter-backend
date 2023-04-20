@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: CANDIDATE-SERVICE
+  datasource:
+    url: jdbc:h2:file:~/eRecruiterCandidateDatabase
+    username:
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: h2
