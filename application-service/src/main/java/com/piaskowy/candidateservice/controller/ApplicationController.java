@@ -2,16 +2,12 @@ package com.piaskowy.candidateservice.controller;
 
 import com.piaskowy.candidateservice.model.Application;
 import com.piaskowy.candidateservice.service.ApplicationService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping("api/v1/applications")
+@RestController
+@RequestMapping("/applications/")
 public class ApplicationController {
     private final ApplicationService applicationService;
 
